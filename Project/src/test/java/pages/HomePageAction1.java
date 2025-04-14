@@ -1,8 +1,5 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.testng.Assert;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 

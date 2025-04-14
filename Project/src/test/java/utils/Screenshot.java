@@ -27,34 +27,31 @@ public class Screenshot {
      */
    static public void screenShotAndHighlight(WebDriver driver,By locator,String filename){
         try {
-        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String screenshotName = filename + "_" + timestamp + ".png";
-        WebElement captureElement =driver.findElement(locator);
-        JavascriptExecutor js=(JavascriptExecutor) driver;
-        js.executeScript("arguments[0].setAttribute('style', 'border:solid 5px red' );", captureElement);
-        Thread.sleep(2000);
-        TakesScreenshot ts=(TakesScreenshot) driver;
-        File fs=ts.getScreenshotAs(OutputType.FILE);
-
-        File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
-        if (!screenshotsDir.exists()) {
-            screenshotsDir.mkdirs();
+	        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+	        String screenshotName = filename + "_" + timestamp + ".png";
+	        WebElement captureElement =driver.findElement(locator);
+	        JavascriptExecutor js=(JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].setAttribute('style', 'border:solid 5px red' );", captureElement);
+	        Thread.sleep(2000);
+	        TakesScreenshot ts=(TakesScreenshot) driver;
+	        File fs=ts.getScreenshotAs(OutputType.FILE);
+	 
+	        File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
+	        if (!screenshotsDir.exists()) {
+	            screenshotsDir.mkdirs();
+	        }
+	 
+	        File target = new File(screenshotsDir, screenshotName);
+	        Files.copy(fs, target);
         }
  
-        File target = new File(screenshotsDir, screenshotName);
-        Files.copy(fs, target);
-    }
-
-      catch(Exception e){
-          e.printStackTrace();
+        catch(Exception e){
+        	e.printStackTrace();
         }
     }
-  
-     /* Author: Ishan
-     * Description: Captures a screenshot of the current browser state and saves it with the specified filename in the "screenshots" directory.
-     * @param filename Base name for the screenshot file (a timestamp will be appended to create the full file name).
-     */
-    public static void captureScreenShot(String filename) {
+ 
+    public static void captureScreenShot(String filename) 
+    {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String name = filename + timestamp + ".png";
         ts = (TakesScreenshot) Base.driver;
@@ -73,6 +70,6 @@ public class Screenshot {
             e.printStackTrace();
         }
     }
- 
- 
 }
+ 
+ 
