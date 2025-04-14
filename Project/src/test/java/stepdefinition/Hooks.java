@@ -21,7 +21,6 @@ public class Hooks extends Base{
     public static void reportConfig(){
         reports = Reporter.createReporter("Avon Cycle");
     }
-
     @Before
     public void initConfig(Scenario sc){
         test = reports.createTest(sc.getName());
@@ -34,7 +33,6 @@ public class Hooks extends Base{
     public void endConfig(){
         if(driver!=null) driver.quit();
     }
-
     @AfterAll
     public static void reportEnd(){
         reports.flush();

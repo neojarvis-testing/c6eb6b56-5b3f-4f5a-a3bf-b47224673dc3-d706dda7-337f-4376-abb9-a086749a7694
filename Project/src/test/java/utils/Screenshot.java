@@ -18,7 +18,6 @@ import com.google.common.io.Files;
 public class Screenshot {
  
     public static TakesScreenshot ts;
-
     /**
      * Author: Ishan
      * Description: This method captures a screenshot of a specific web element on a webpage.
