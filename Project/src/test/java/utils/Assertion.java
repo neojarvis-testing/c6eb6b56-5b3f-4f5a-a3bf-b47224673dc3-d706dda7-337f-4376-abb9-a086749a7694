@@ -4,14 +4,13 @@ import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
 public class Assertion {
 		
 	public static void asserTitle(String expectedTitle, ExtentTest test)
 	{
 		try {
 			String actualTitle = Base.driver.getTitle();
-			Assert.assertTrue(actualTitle.contains(expectedTitle));
+			org.junit.Assert.assertTrue(actualTitle.contains(expectedTitle));
 			
 			LoggerHandler.info("Title " + expectedTitle + " verified");
 			test.log(Status.PASS, "Title " + expectedTitle + " verified");
@@ -20,7 +19,6 @@ public class Assertion {
 		{
 			LoggerHandler.error("Title " + expectedTitle + " not verified");
 			test.log(Status.FAIL, "Title " + expectedTitle + " not verified");
- 
 		}
 	}
 	
@@ -37,7 +35,6 @@ public class Assertion {
 		{
 			LoggerHandler.error("URL " + expectedUrl + " not verified");
 			test.log(Status.FAIL, "URL " + expectedUrl + " not verified");
- 
 		}
 	}
 	
@@ -53,7 +50,7 @@ public class Assertion {
 		{
 			LoggerHandler.error(expectedValue + " not verified");
 			test.log(Status.FAIL, expectedValue + " not verified");
- 
+
 		}
 	}
 }
