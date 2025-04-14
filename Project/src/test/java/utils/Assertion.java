@@ -1,5 +1,4 @@
 package utils;
-
 import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
