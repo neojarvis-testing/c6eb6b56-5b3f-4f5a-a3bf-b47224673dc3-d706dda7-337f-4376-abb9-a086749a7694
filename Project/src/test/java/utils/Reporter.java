@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
- 
+
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot; 
+import org.openqa.selenium.TakesScreenshot;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -36,7 +37,7 @@ public class Reporter {
         }
  
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
-        TimeZone istTimeZone = TimeZone.getTimeZone("Asia/Kolkata"); // IST timezone
+        TimeZone istTimeZone = TimeZone.getTimeZone("Asia/Kolkata");
         dateFormat.setTimeZone(istTimeZone);
         String timestamp = dateFormat.format(new Date());
  
@@ -91,6 +92,5 @@ public class Reporter {
         } catch (Exception e) {
             e.printStackTrace();
         }
- 
     }
 }
