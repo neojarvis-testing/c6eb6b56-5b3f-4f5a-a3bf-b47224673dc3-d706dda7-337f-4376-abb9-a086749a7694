@@ -4,7 +4,6 @@ import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
 public class Assertion {
 		
 	public static void asserTitle(String expectedTitle, ExtentTest test)
@@ -20,7 +19,6 @@ public class Assertion {
 		{
 			LoggerHandler.error("Title " + expectedTitle + " not verified");
 			test.log(Status.FAIL, "Title " + expectedTitle + " not verified");
-
 		}
 	}
 	
@@ -37,7 +35,6 @@ public class Assertion {
 		{
 			LoggerHandler.error("URL " + expectedUrl + " not verified");
 			test.log(Status.FAIL, "URL " + expectedUrl + " not verified");
-
 		}
 	}
 	
