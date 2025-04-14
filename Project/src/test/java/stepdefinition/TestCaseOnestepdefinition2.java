@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinition;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import pages.CheckoutPageAction2;
 import pages.HomePageAction2;
 import pages.ProductListPageAction2;
+import stepdefinition.Hooks;
 import utils.Base;
 
 public class TestCaseOnestepdefinition2 {
