@@ -8,7 +8,7 @@ import pages.HomePageActions5;
 import pages.TreadMillFirstProductActions5;
 import pages.TreadMillsActions5;
 
-public class Stepdefinition2 {
+public class Stepdefinition2_5 {
     @Given("User lands on the homepage2")
 public void user_lands_on_the_homepage2() {
     System.out.println("Browser Opened");

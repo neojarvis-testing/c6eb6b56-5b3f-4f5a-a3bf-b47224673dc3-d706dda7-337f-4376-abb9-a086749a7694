@@ -10,7 +10,7 @@ import pages.HomePageActions5;
 import pages.LoginPageActions5;
 import pages.NewLaunchesActions5;
 
-public class stepdefinition1 {
+public class stepdefinition1_5 {
     @Given("User lands on the homepage")
 public void user_lands_on_the_homepage() {
     
