@@ -5,16 +5,16 @@ import java.util.List;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.CheckoutPageAction;
-import pages.HomePageAction;
-import pages.ProductListPageAction;
+import pages.CheckoutPageAction2;
+import pages.HomePageAction2;
+import pages.ProductListPageAction2;
 import utils.Base;
 
-public class TestCaseOnestepdefinition {
+public class TestCaseOnestepdefinition2 {
 
-    HomePageAction performHomePageAction = new HomePageAction(Base.driver);
-    CheckoutPageAction performCheckoutPageAction = new CheckoutPageAction(Base.driver);
-    ProductListPageAction performProductPageAction = new ProductListPageAction(Base.driver);
+    HomePageAction2 performHomePageAction = new HomePageAction2(Base.driver);
+    CheckoutPageAction2 performCheckoutPageAction = new CheckoutPageAction2(Base.driver);
+    ProductListPageAction2 performProductPageAction = new ProductListPageAction2(Base.driver);
 
     @Given("user is on the homepage")
     public void user_is_on_the_homepage() {

@@ -2,7 +2,7 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-public class CheckoutPageLocator {
+public class CheckoutPageLocator2 {
 
     public static By firstName = By.name("first_name");
     public static By lastName = By.name("last_name");
